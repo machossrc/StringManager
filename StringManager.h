@@ -5,20 +5,10 @@ class CStringManager
 private:
 	char* m_pString;
 public:
-	bool operator==(const CStringManager& rhs) const
-	{
-		if (m_pString != rhs.m_pString)
-		{
-			return false;
-		}
-		if (strcmp(m_pString, rhs.m_pString) != 0)
-		{
-			return false;
-		}
-		return true;
-	}
+	bool operator==(const CStringManager& rhs);
 public:
-	CStringManager(const char * szString);
 	CStringManager();
+	CStringManager(const char * szString);
+	CStringManager(const CStringManager& rhs);
 	~CStringManager();
 };
