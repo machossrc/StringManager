@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "StringManager.h"
 
 using namespace std;
 
