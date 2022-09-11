@@ -25,10 +25,34 @@ CStringManager::CStringManager(const CStringManager& rhs)
 
 bool CStringManager::operator==(const CStringManager& rhs)
 {
-	std::cout << m_pString << std::endl;
-	std::cout << rhs.m_pString << std::endl;
-
 	if (strcmp(m_pString, rhs.m_pString) != 0)
+	{
+		return false;
+	}
+	return true;
+}
+
+bool CStringManager::operator!=(const CStringManager& rhs)
+{
+	if (strcmp(m_pString, rhs.m_pString) == 0)
+	{
+		return false;
+	}
+	return true;
+}
+
+bool CStringManager::operator==(const char* szString)
+{
+	if (strcmp(m_pString, szString) != 0)
+	{
+		return false;
+	}
+	return true;
+}
+
+bool CStringManager::operator!=(const char* szString)
+{
+	if (strcmp(m_pString, szString) == 0)
 	{
 		return false;
 	}
